@@ -67,3 +67,28 @@ int pop(void)
     }
     return (stack[top--]); // Return the popped value and post-decrement top.
 }
+
+||
+    /*
+    bool isValid(char * s){
+    int n = strlen(s);
+    if (n % 2 != 0) return false;
+
+    char stack[n];
+    int top = -1;
+
+    for (int i = 0; i < n; i++) {
+        char c = s[i];
+        if (c == '(' || c == '{' || c == '[') {
+            stack[++top] = c;
+        } else {
+            if (top == -1) return false;
+            char t = stack[top--];
+            if ((c == ')' && t != '(') || (c == '}' && t != '{') || (c == ']' && t != '[')) {
+                return false;
+            }
+        }
+    }
+
+    return top == -1;
+// */
